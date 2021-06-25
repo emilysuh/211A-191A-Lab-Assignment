@@ -1,0 +1,12 @@
+html, body {
+    padding: 5px;
+ }
+
+
+#map {
+    height: 40vh;
+}
+
+#footer {
+    grid-area: footer;
+}
