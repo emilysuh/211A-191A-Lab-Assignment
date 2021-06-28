@@ -1,4 +1,4 @@
-const map = L.map('map').setView([34.0709, -118.444], 5);
+const map = L.map('maparea').setView([34.0709, -118.444], 5);
 
 // Leaflet tile layer, i.e. the base map
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -9,4 +9,16 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 let marker = L.marker([34.0709, -118.444]).addTo(map)
 		.bindPopup('Math Sciences 4328 aka the Technology Sandbox<br> is the lab where I work in ')
 		// .openPopup();
-
+let marker = L.marker([34.0709, -118.444]).addTo(map)
+        fetch("map.geojson")
+        .then(response => {
+            return response.json();
+            })
+        .then(data =>{
+            // Basic Leaflet method to add GeoJSON data
+                // the leaflet method for adding a geojson
+                L.geoJSON(data).bindPopup(function (layer) {
+                    return layer.feature.properties.name;
+                }).addTo(map);
+            });
+    
