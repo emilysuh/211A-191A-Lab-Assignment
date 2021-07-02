@@ -22,7 +22,14 @@ html, body {
     grid-area: main;
     background-color: rgb(224, 205, 223);
 }
-
+img {
+    border-radius: 8px;
+  }
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;;
+  }
 #map {
     grid-area: map;
     height: 40vh;
