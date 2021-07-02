@@ -6,8 +6,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 //JavaScript let variable declaration to create a marker
-let marker = L.marker([34.0709, -118.444]).addTo(map)
-		.bindPopup('Math Sciences 4328 aka the Technology Sandbox<br> is the lab where I work in ')
+let point1 = L.marker([34.050739, -118.255127]).addTo(map)
+		.bindPopup('Los Angeles Central Library is just a few blocks from the Pershing Square Metro stop!  ')
+		// .openPopup();
+let point2 = L.marker([33.871658, -117.860771]).addTo(map)
+		.bindPopup('Placentia Library, the library I visited most growing up  ')
+		// .openPopup();
+let point3 = L.marker([34.074430, -118.311420]).addTo(map)
+		.bindPopup('The Wilshire Branch of the LA Public Library has a small community herb garden  ')
 		// .openPopup();
         
 fetch("map.geojson")
