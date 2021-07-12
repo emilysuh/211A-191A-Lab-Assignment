@@ -13,7 +13,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // create a function to add markers
 function addMarker(lat,lng,title,message){
     console.log(message)
-    L.marker([lat,lng]).addTo(myMap).bindPopup(`<h2>${title}</h2>`)
+    L.marker([lat,lng]).addTo(myMap).bindPopup(`<h2>${message}</h2>`)
     createButtons(lat,lng,title); // new line!!!
     return message
 }
@@ -37,4 +37,3 @@ function createButtons(lat,lng,title){
 addMarker(41.91544216751102, -87.65951689697114,'Chicago','lived here in the first months after immigrating')
 addMarker(34.04519890220547, -118.30052367040308,'Los Angeles','resident for roughly a decade')
 addMarker(37.55450599742844, 126.98704686562685,'Seoul','I was born here!')
-addMarker(37.68094081954368, 126.79803354057898,'Ilsan','I lived here too')
